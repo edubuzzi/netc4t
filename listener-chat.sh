@@ -11,8 +11,12 @@ echo "Seu IP Externo é: $IPexterno"
 echo
 echo "(1) Utilizar IP Interno"
 echo "(2) Utilizar IP Externo"
+echo "(0) Voltar"
 read -p "Qual sua escolha? " ESCOLHA
 case $ESCOLHA in
+0)
+./chat.sh
+;;
 1)
 ./listener-chat-interno.sh
 ;;
@@ -30,8 +34,12 @@ echo 'echo "Seu IP Externo é: $IPexterno"' >> .listener-chat-again.sh
 echo 'echo' >> .listener-chat-again.sh
 echo 'echo "(1) Utilizar IP Interno"' >> .listener-chat-again.sh
 echo 'echo "(2) Utilizar IP Externo"' >> .listener-chat-again.sh
+echo 'echo "(0) Voltar"' >> .listener-chat-again.sh
 echo 'read -p "Qual sua escolha? " ESCOLHA' >> .listener-chat-again.sh
 echo 'case $ESCOLHA in' >> .listener-chat-again.sh
+echo '0)' >> .listener-chat-again.sh
+echo './chat.sh' >> .listener-chat-again.sh
+echo ';;' >> .listener-chat-again.sh
 echo '1)' >> .listener-chat-again.sh
 echo './listener-chat-interno.sh' >> .listener-chat-again.sh
 echo ';;' >> .listener-chat-again.sh
