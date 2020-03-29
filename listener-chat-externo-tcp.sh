@@ -9,6 +9,7 @@ IPexterno=$(grep "<title>" IP | cut -d ' ' -f9 | cut -d '<' -f1)
 echo
 echo "Quer utilizar o IP Externo $IPexterno?"
 echo "ou deseja utilizar um IP Externo diferente?"
+echo
 echo "(1) Utilizar o IP $IPexterno"
 echo "(2) Utilizar um IP diferente"
 echo "(0) Voltar"
@@ -31,6 +32,7 @@ echo 'rm IP' >> .listener-chat-externo-tcp-again.sh
 echo 'echo' >> .listener-chat-externo-tcp-again.sh
 echo 'echo "Quer utilizar o IP Externo $IPexterno?"' >> .listener-chat-externo-tcp-again.sh
 echo 'echo "ou deseja utilizar um IP Externo diferente?"' >> .listener-chat-externo-tcp-again.sh
+echo 'echo' >> .listener-chat-externo-tcp-again.sh
 echo 'echo "(1) Utilizar o IP $IPexterno"' >> .listener-chat-externo-tcp-again.sh
 echo 'echo "(2) Utilizar um IP diferente"' >> .listener-chat-externo-tcp-again.sh
 echo 'echo "(0) Voltar"' >> .listener-chat-externo-tcp-again.sh
