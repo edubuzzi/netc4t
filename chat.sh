@@ -1,7 +1,7 @@
 #!/bin/bash
 
-chmod +x listener-chat.sh
-chmod +x sender-chat.sh
+chmod +x ./listener-chat.sh
+chmod +x ./sender-chat.sh
 
 echo
 echo "(1) Escutar Chat"
