@@ -64,3 +64,5 @@ chmod +x .executeagain.sh
 ./.executeagain.sh
 ;;
 esac
+./execute.sh
+exit
