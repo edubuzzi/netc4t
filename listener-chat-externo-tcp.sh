@@ -1,7 +1,7 @@
 #!/bin/bash
 
-chmod +x ./listener-chat-externo-padrao.sh
-chmod +x ./listener-chat-externo-personalizado.sh
+chmod +x ./listener-chat-externo-padrao-tcp.sh
+chmod +x ./listener-chat-externo-personalizado-tcp.sh
 
 curl -s -C - -o IP http://meuip.net.br
 IPexterno=$(grep "<title>" IP | cut -d ' ' -f9 | cut -d '<' -f1)
