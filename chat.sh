@@ -1,10 +1,7 @@
 #!/bin/bash
-
 chmod +x ./listener-chat.sh
 chmod +x ./sender-chat.sh
-
 trap '' 2
-
 echo
 echo "(1) Escutar Chat"
 echo "(2) Enviar Chat"
