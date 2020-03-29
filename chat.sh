@@ -9,15 +9,9 @@ echo "(0) Voltar"
 echo
 read -p "Qual sua escolha? " ESCOLHA
 case $ESCOLHA in
-0)
-./execute.sh
-;;
-1)
-./listener-chat.sh
-;;
-2)
-./sender-chat.sh
-;;
+0) ./execute.sh ;;
+1) ./listener-chat.sh ;;
+2) ./sender-chat.sh ;;
 *)
 echo "echo" > .chat-again.sh
 echo 'echo "(1) Escutar Chat"' >> .chat-again.sh
