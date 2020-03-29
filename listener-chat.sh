@@ -5,7 +5,7 @@ chmod +x ./listener-chat-externo.sh
 
 curl -s -C - -o IP http://meuip.net.br
 IPexterno=$(grep "<title>" IP | cut -d ' ' -f9 | cut -d '<' -f1)
-IPinterno=$(hostname -I | cut -d ' ' -f1)
+IPinterno=$(hostname -I | cut -d " " -f1)
 rm IP
 
 echo
@@ -29,7 +29,7 @@ case $ESCOLHA in
 *)
 echo 'curl -s -C - -o IP http://meuip.net.br' > .listener-chat-again.sh
 echo 'IPexterno=$(grep "<title>" IP | cut -d " " -f9 | cut -d "<" -f1)' >> .listener-chat-again.sh
-echo 'IPinterno=$(hostname -I | cut -d ' ' -f1)' >> .listener-chat-again.sh
+echo 'IPinterno=$(hostname -I | cut -d " " -f1)' >> .listener-chat-again.sh
 echo 'rm IP' >> .listener-chat-again.sh
 echo 'echo' >> .listener-chat-again.sh
 echo 'echo "Seu IP Interno é: $IPinterno"' >> .listener-chat-again.sh
