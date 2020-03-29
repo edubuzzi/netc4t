@@ -5,6 +5,7 @@ chmod +x ./listener-chat-externo-personalizado-tcp.sh
 
 curl -s -C - -o IP http://meuip.net.br
 IPexterno=$(grep "<title>" IP | cut -d ' ' -f9 | cut -d '<' -f1)
+rm IP
 
 echo
 echo "Quer utilizar o IP Externo $IPexterno?"
