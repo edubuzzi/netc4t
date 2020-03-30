@@ -11,6 +11,6 @@ read -p "Informe o destino do arquivo: " DESTINO
 echo "Tentando enviar $DESTINO na porta $PORTA do $IPreceber"
 echo
 trap 2
-nc $IPreceber $PORTA -w2 << $DESTINO
+nc $IPreceber $PORTA -w2 < $DESTINO
 ./execute.sh
 exit
