@@ -7,21 +7,22 @@ then
 echo
 echo "O dominio $DOMINIO aparentemente está fora do ar!"
 echo "Verifique o dominio novamente ou coloque um válido!!"
-./portscan-dominio.sh
+./portscan.sh
 exit
 fi
 echo
 echo "Informe o delimitador de portas quer fazer o scan (ex: 21 443)"
-echo "Se quiser fazer scan de apenas uma porta só coloca ela sozinha (ex: 80)"
+echo "Se quiser fazer scan de apenas uma porta só coloca ela duas vezes (ex: 80 80)"
 read -p "Informe a(s) porta(s) para fazer scan: " PORTAinicial PORTAfinal
 echo
 if [ -z $PORTAinicial ] && [ -z $PORTAfinal ]
 then
 echo "Por que você não informou nenhuma porta?"
-echo "Tudo bem, vou fingir que informou apenas a porta 80 ;)"
+echo "Tudo bem, vou fingir que quis escolher fazer scan de todas que existem! ;)"
+echo "Pode levar um tempo para fazer o scan, mas vai descobrir todas portas abertas!"
 echo
-PORTAinicial=80
-PORTAfinal=80
+PORTAinicial=1
+PORTAfinal=65535
 fi
 nc -vz -w1 $IP $PORTAinicial-$PORTAfinal
 ./execute.sh
