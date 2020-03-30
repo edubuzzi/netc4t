@@ -11,7 +11,7 @@ echo
 echo "Digite o nome que o arquivo vai receber"
 echo "Exemplo: 'arquivo.txt'"
 read -p "Digite o nome do arquivo: " ARQUIVO
-if [ $ARQUIVO -eq '' ]
+if [ -z $ARQUIVO ]
 then
 $ARQUIVO='arquivo'
 fi
