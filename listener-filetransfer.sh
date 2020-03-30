@@ -8,12 +8,12 @@ echo
 echo "Seu IP Interno é: $IPinterno"
 echo "Seu IP Externo é: $IPexterno"
 echo
-echo "Informe o destino do Arquivo"
-echo "Exemplo: '/root/arquivo.txt'" 
-read -p "Destino onde vai ser armazenado: " DESTINO
-echo "O arquivo vai ser armazenado em '$DESTINO'"
+echo "Digite o nome que o arquivo vai receber"
+echo "Exemplo: 'arquivo.txt'"
+read -p "Digite o nome do arquivo: " ARQUIVO
+echo "O arquivo vai ser armazenado em '$PWD/$ARQUIVO'"
 read -p "Informe a porta para escutar (entre 1-65535): " PORTA
 trap 2
-nc -lvp $PORTA >> $DESTINO
+nc -lvp $PORTA >> $PWD/$ARQUIVO
 ./execute.sh
 exit
