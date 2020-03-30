@@ -6,7 +6,7 @@ chmod +x ./shellreverso.sh
 chmod +x ./portscan.sh
 trap '' 2
 echo
-echo -e "Script \033[01;34mnetc4t\033[01;00m" criado por: \033[01;32mEduardo Buzzi\033[01;00m"
+echo -e "Script \033[01;34mnetc4t\033[01;00m criado por: \033[01;32mEduardo Buzzi\033[01;00m"
 echo -e "Mais Scripts em: \033[01;31mhttps://github.com/eduardbuzzi\033[01;00m"
 echo
 echo "(1) Instalar NetCAT"
