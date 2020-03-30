@@ -13,7 +13,7 @@ echo "Exemplo: 'arquivo.txt'"
 read -p "Digite o nome do arquivo: " ARQUIVO
 if [ -z $ARQUIVO ]
 then
-$ARQUIVO='arquivo'
+ARQUIVO="arquivo"
 fi
 echo "O arquivo vai ser armazenado em '$PWD/$ARQUIVO'"
 read -p "Informe a porta para escutar (entre 1-65535): " PORTA
