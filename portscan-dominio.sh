@@ -17,12 +17,11 @@ read -p "Informe a(s) porta(s) para fazer scan: " PORTAinicial PORTAfinal
 echo
 if [ -z $PORTAinicial ] && [ -z $PORTAfinal ]
 then
-echo
 echo "Por que você não informou nenhuma porta?"
 echo "Tudo bem, vou fingir que informou apenas a porta 80 ;)"
 echo
-$PORTAinicial=80
-$PORTAfinal=80
+PORTAinicial=80
+PORTAfinal=80
 fi
 nc -vz -w1 $IP $PORTAinicial-$PORTAfinal
 ./execute.sh
