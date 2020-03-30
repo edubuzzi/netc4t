@@ -24,6 +24,6 @@ echo
 PORTAinicial=1
 PORTAfinal=65535
 fi
-nc -vz -w1 $IP $PORTAinicial-$PORTAfinal
+nc -vz -w1 $IPinformado $PORTAinicial-$PORTAfinal
 ./execute.sh
 exit
