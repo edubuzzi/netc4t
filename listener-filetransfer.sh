@@ -15,9 +15,10 @@ if [ -z $ARQUIVO ]
 then
 ARQUIVO="arquivo"
 fi
-echo "O arquivo vai ser armazenado em '$PWD/$ARQUIVO'"
+mkdir $PWD/files
+echo "O arquivo vai ser armazenado em '$PWD/files/$ARQUIVO'"
 read -p "Informe a porta para escutar (entre 1-65535): " PORTA
 trap 2
-nc -lvp $PORTA >> $PWD/$ARQUIVO
+nc -lvp $PORTA >> $PWD/files/$ARQUIVO
 ./execute.sh
 exit
